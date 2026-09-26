@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life — Rei Li</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --dark: #0E251F; --primary: #556B46; --accent: #B26B5A;
+      --light: #F2EBD8; --warm: #DFA89A; --text: #1c130f; --muted: #7a6255;
+    }
+    .life-intro { max-width: 620px; font-size: 15px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 20px; }
+    .gallery-featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .gallery-photo { display: block; background: var(--light); border-radius: 4px; overflow: hidden; }
+    .gallery-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; }
+    .gallery-featured img { aspect-ratio: 4 / 3; }
+    .gallery-photo:focus-visible { outline: 3px solid var(--primary); outline-offset: 4px; }
+    figcaption { margin-top: 12px; font-size: 12px; line-height: 1.65; color: var(--muted); }
+    figcaption strong { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 17px; color: var(--text); margin-bottom: 4px; }
+    .gallery-note { font-size: 12px; color: var(--muted); margin-top: 16px; }
+    @media (max-width: 640px) { .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; } }
+    @media (max-width: 420px) { .gallery-featured { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand">Rei Li</span>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="life.html" class="active">Life</a></li>
+  </ul>
+</nav>
+
+<main class="page-wrapper">
+  <div class="page-header">
+    <h1>Life ? Made by Hand</h1>
+    <p>Handmade food miniatures in polymer clay and other clays.</p>
+  </div>
+  <p class="life-intro">Away from circuits and code, I create food miniatures from polymer clay and other clays. Each tiny cake, colorful tart, and miniature dish is shaped by hand, with a focus on texture, color, and small details.</p>
+  <section>
+    <h2>Miniature Dessert Scenes</h2>
+    <div class="gallery-grid gallery-featured">
+      <figure class="gallery-card">
+        <a class="gallery-photo" href="photo/web/mint-chocolate.webp" aria-label="View Mint &amp; Chocolate at full size">
+          <img src="photo/web/mint-chocolate.webp" alt="A miniature dessert setting in mint green and chocolate brown." loading="eager" decoding="async" width="1200" height="956" />
+        </a>
+        <figcaption><strong>Mint &amp; Chocolate</strong>A miniature dessert setting in mint green and chocolate brown.</figcaption>
+      </figure>
+      <figure class="gallery-card">
+        <a class="gallery-photo" href="photo/web/mlp-cake.webp" aria-label="View My Little Pony Cakes at full size">
+          <img src="photo/web/mlp-cake.webp" alt="Colorful miniature cakes with playful decorative details." loading="eager" decoding="async" width="1200" height="928" />
+        </a>
+        <figcaption><strong>My Little Pony Cakes</strong>Colorful miniature cakes with playful decorative details.</figcaption>
+      </figure>
+    </div>
+    <p class="gallery-note">Select a photograph to see the details.</p>
+  </section>
+  <section>
+    <h2>Small Bites &amp; Tiny Details</h2>
+    <div class="gallery-grid">
+      <figure class="gallery-card">
+        <a class="gallery-photo" href="photo/web/barbie-tart.webp" aria-label="View Barbie Tarts at full size">
+          <img src="photo/web/barbie-tart.webp" alt="Tiny tarts with bright colors and sculpted toppings." loading="lazy" decoding="async" width="900" height="1200" />
+        </a>
+        <figcaption><strong>Barbie Tarts</strong>Tiny tarts with bright colors and sculpted toppings.</figcaption>
+      </figure>
+      <figure class="gallery-card">
+        <a class="gallery-photo" href="photo/web/little-cupcake.webp" aria-label="View Little Cupcakes at full size">
+          <img src="photo/web/little-cupcake.webp" alt="A small assortment of swirled frosting and tiny toppings." loading="lazy" decoding="async" width="900" height="1200" />
+        </a>
+        <figcaption><strong>Little Cupcakes</strong>A small assortment of swirled frosting and tiny toppings.</figcaption>
+      </figure>
+      <figure class="gallery-card">
+        <a class="gallery-photo" href="photo/web/little-tart.webp" aria-label="View Little Tarts at full size">
+          <img src="photo/web/little-tart.webp" alt="Miniature fruit tarts, each with its own finishing touches." loading="lazy" decoding="async" width="900" height="1200" />
+        </a>
+        <figcaption><strong>Little Tarts</strong>Miniature fruit tarts, each with its own finishing touches.</figcaption>
+      </figure>
+      <figure class="gallery-card">
+        <a class="gallery-photo" href="photo/web/mini-crumbl-cookies.webp" aria-label="View Mini Crumbl Cookies at full size">
+          <img src="photo/web/mini-crumbl-cookies.webp" alt="A pink tray of tiny decorated cookies, shown in the palm of a hand." loading="lazy" decoding="async" width="900" height="1200" />
+        </a>
+        <figcaption><strong>Mini Crumbl Cookies</strong>A pink tray of tiny decorated cookies, shown in the palm of a hand.</figcaption>
+      </figure>
+      <figure class="gallery-card">
+        <a class="gallery-photo" href="photo/web/ratatouille.webp" aria-label="View Ratatouille at full size">
+          <img src="photo/web/ratatouille.webp" alt="A miniature vegetable dish with carefully arranged colorful slices." loading="lazy" decoding="async" width="900" height="1200" />
+        </a>
+        <figcaption><strong>Ratatouille</strong>A miniature vegetable dish with carefully arranged colorful slices.</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Rei Li &nbsp;·&nbsp; Electrical Engineering &nbsp;·&nbsp;
+  <a href="https://engineering.nyu.edu/" target="_blank">NYU Tandon School of Engineering</a>
+  &nbsp;·&nbsp;
+  <a href="mailto:xl5871@nyu.edu">xl5871@nyu.edu</a>
+</footer>
+
+</body>
+</html>

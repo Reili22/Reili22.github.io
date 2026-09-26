@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — Rei Li</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Teal Peach Theme (7/10) ── */
+    :root {
+      --dark:    #27443F;  /* Deep Forest    — nav, footer */
+      --primary: #4A7F73;  /* Aegean Teal    — headers, links */
+      --accent:  #A8CFC6;  /* Seafoam Mist   — borders, highlights */
+      --light:   #EEF6F4;  /* Teal tint      — card backgrounds */
+      --warm:    #C9742D;  /* Amber Glow     — badges, tags */
+      --text:    #0f1e1b;
+      --muted:   #5a7870;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand">Rei Li</span>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="research.html" class="active">Research</a></li>
+    <li><a href="life.html">Life</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>Research</h1>
+    <p>Current and past research projects across hardware, embedded systems, and energy systems.</p>
+  </div>
+
+  <section>
+    <h2>Current Project</h2>
+
+    <div class="project-card">
+      <div class="project-status">● Ongoing &nbsp;·&nbsp; Undergraduate Thesis</div>
+      <h3>A Chaotic ROI-Selective Image Encryption Accelerator for the Xilinx Kria KV260, Co-Designed with YOLOv8-nano Detection</h3>
+      <p>
+        Developing a chaotic ROI-selective image encryption accelerator for the Xilinx Kria
+        KV260, co-designed with YOLOv8-nano object detection. Detected regions of interest
+        guide selective encryption, linking visual detection with hardware-based image protection.
+      </p>
+      <p>
+        The project focuses on integrating detection outputs with the FPGA encryption pipeline
+        and exploring the trade-offs between resource use, processing latency, and selective
+        protection for edge vision applications.
+      </p>
+      <div class="tags">
+        <span class="tag">Verilog</span>
+        <span class="tag">Vivado</span>
+        <span class="tag">FPGA</span>
+        <span class="tag">YOLOv8-nano</span>
+        <span class="tag">Xilinx Kria KV260</span>
+        <span class="tag">ROI-Selective Encryption</span>
+        <span class="tag">Hardware Security</span>
+        <span class="tag">Edge AI</span>
+        <span class="tag">Computer Vision</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Embedded AI Systems</h2>
+
+    <div class="project-card">
+      <div class="project-status">Independent Study · NYU</div>
+      <h3>ESP32-Based Intelligent Assistive Platform</h3>
+      <p>
+        Designing a resource-constrained embedded AI platform centered on the ESP32
+        microcontroller, targeting human-centered assistive applications. The system integrates
+        a camera module for real-time computer vision inference, a microphone array with voice
+        activity detection, and multiple environmental sensors fused through a lightweight
+        Kalman-based estimator.
+      </p>
+      <p>
+        Key design constraints include sub-100 mW power budget, latency under 200 ms for
+        vision inference, and operation without cloud connectivity. Inference is handled
+        on-device using quantized models optimized for the ESP32's dual-core Xtensa architecture.
+      </p>
+      <div class="tags">
+        <span class="tag">ESP32</span>
+        <span class="tag">Edge AI</span>
+        <span class="tag">Sensor Fusion</span>
+        <span class="tag">Computer Vision</span>
+        <span class="tag">Real-Time Embedded</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Real-Time Control &amp; Energy Systems</h2>
+
+    <div class="project-card">
+      <div class="project-status">NYU Power &amp; Energy Systems Group · Prof. Francisco de León</div>
+      <h3>Adaptive Control for Inverter-Based Microgrids</h3>
+      <p>
+        Developed a suite of adaptive control and synchronization algorithms for inverter-based
+        distributed energy resources (DER) in grid-connected and islanded microgrid configurations.
+        Work spans three related problems: frequency regulation under variable photovoltaic
+        generation, seamless island-to-grid reconnection, and battery-aware black-start restoration.
+      </p>
+      <p>
+        The SoC-aware phase-angle control framework extends classical droop control by incorporating
+        a real-time SoC feedback loop that adjusts the inverter's active power setpoint, preventing
+        deep discharge events while maintaining grid frequency within IEEE 1547 bounds.
+        Simulations conducted in PSCAD and MATLAB/Simulink.
+      </p>
+      <div class="tags">
+        <span class="tag">MATLAB</span>
+        <span class="tag">Simulink</span>
+        <span class="tag">PSCAD</span>
+        <span class="tag">Adaptive Control</span>
+        <span class="tag">Inverter Control</span>
+        <span class="tag">Microgrid</span>
+        <span class="tag">Battery Management</span>
+        <span class="tag">DER</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-status">Chinese Academy of Sciences</div>
+      <h3>Battery Management Systems for Electric Vehicles</h3>
+      <p>
+        Investigated lithium-ion battery modeling, state estimation, and thermal management
+        strategies for electric vehicle battery packs. Work included equivalent circuit model
+        identification, SoC estimation using extended Kalman filtering, and analysis of
+        capacity fade under cycling conditions.
+      </p>
+      <div class="tags">
+        <span class="tag">Battery Modeling</span>
+        <span class="tag">State Estimation</span>
+        <span class="tag">Kalman Filter</span>
+        <span class="tag">Lithium-Ion</span>
+        <span class="tag">Electric Vehicles</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Research Vision</h2>
+    <p style="font-size:14px; line-height:1.85; max-width:700px;">
+      My long-term goal is to develop efficient intelligent hardware systems that integrate
+      machine learning algorithms directly with digital hardware — moving AI from cloud
+      servers to the silicon edge. I am particularly interested in FPGA-based AI acceleration,
+      hardware security architectures, and energy-efficient systems capable of supporting
+      real-time applications under strict power and latency constraints.
+    </p>
+    <br>
+    <p style="font-size:14px; line-height:1.85; max-width:700px;">
+      I am currently expanding expertise in RTL design, FPGA architecture, timing analysis,
+      computer architecture, and ASIC design flows — aiming to contribute to next-generation
+      computing platforms at the hardware–algorithm interface.
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  Rei Li &nbsp;·&nbsp; Electrical Engineering &nbsp;·&nbsp; <a href="https://engineering.nyu.edu/" target="_blank">NYU Tandon School of Engineering</a>
+  &nbsp;·&nbsp;
+  <a href="mailto:xl5871@nyu.edu">xl5871@nyu.edu</a>
+</footer>
+
+</body>
+</html>
