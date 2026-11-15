@@ -374,6 +374,9 @@ body.site main a { color: var(--navy); }
   box-shadow: var(--shadow-md);
 }
 
+.site .hero-solo { grid-template-columns: minmax(0, 1fr); }
+.site .hero-solo .hero-bio { max-width: 760px; }
+
 /* stats strip */
 .site .stats {
   display: grid;
