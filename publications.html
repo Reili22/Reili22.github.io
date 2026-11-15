@@ -4,174 +4,159 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications — Rei Li</title>
+  <meta name="description" content="Journal articles, conference papers, and thesis research by Rei Li." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* ── Green Natural Theme (4/10) ── */
-    :root {
-      --dark:    #1A4D41;  /* Deep Forest    — nav, footer */
-      --primary: #1A4D41;  /* Deep Forest    — headers, links */
-      --accent:  #C97E8B;  /* Blush Rose     — borders, highlights */
-      --light:   #F2EBD8;  /* Warm Cream     — card backgrounds */
-      --warm:    #7BA271;  /* Herbal Green   — badges, tags */
-      --text:    #0f1e1b;
-      --muted:   #5a7060;
-    }
-  </style>
 </head>
-<body>
+<body class="site">
 
 <nav>
-  <span class="nav-brand">Rei Li</span>
+  <a class="nav-brand" href="index.html" style="text-decoration:none">Rei Li</a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="publications.html" class="active">Publications</a></li>
+    <li><a href="publications.html" class="active" aria-current="page">Publications</a></li>
     <li><a href="research.html">Research</a></li>
     <li><a href="life.html">Life</a></li>
   </ul>
 </nav>
 
-<div class="page-wrapper">
+<main>
+  <div class="container">
 
-  <div class="page-header">
-    <h1>Publications</h1>
-    <p>Journal articles, conference papers, and thesis research.</p>
+    <header class="page-hero">
+      <span class="eyebrow">Journal · Conference · Thesis</span>
+      <h1>Publications</h1>
+      <p>Journal articles, conference papers, and thesis research across hardware acceleration, hardware security, and energy systems.</p>
+      <div class="legend">
+        <span class="status status-published">Published</span>
+        <span class="status status-accepted">Accepted</span>
+        <span class="status status-review">Under Review</span>
+        <span class="status status-prep">In Preparation</span>
+      </div>
+    </header>
+
+    <div class="pub-toolbar" role="group" aria-label="Filter publications">
+      <button class="filter is-active" data-filter="all" aria-pressed="true">All<span class="count">9</span></button>
+      <button class="filter" data-filter="thesis" aria-pressed="false">Thesis<span class="count">1</span></button>
+      <button class="filter" data-filter="journal" aria-pressed="false">Journal Articles<span class="count">5</span></button>
+      <button class="filter" data-filter="conference" aria-pressed="false">Conference Papers<span class="count">3</span></button>
+    </div>
+
+    <section class="block pub-section" data-group="thesis">
+      <div class="block-head"><h2>Thesis</h2></div>
+      <div class="pub-list">
+      <article class="card pub-card" data-type="thesis">
+        <span class="pub-id">T1</span>
+        <div>
+          <h3>A Chaotic ROI-Selective Image Encryption Accelerator for the Xilinx Kria KV260, Co-Designed with YOLOv8-nano Detection</h3>
+          <div class="pub-meta"><span class="pub-venue">Undergraduate Thesis · <a href="https://engineering.nyu.edu/" target="_blank" rel="noopener">NYU Tandon School of Engineering</a></span><span class="status status-prep">In Preparation</span></div>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <section class="block pub-section" data-group="journal">
+      <div class="block-head"><h2>Journal Articles</h2></div>
+      <div class="pub-list">
+      <article class="card pub-card" data-type="journal">
+        <span class="pub-id">J5</span>
+        <div>
+          <h3>Fitting FPGA Detector Activations On Chip: Certified Storage Formats and Layouts Beyond Live-Byte Estimates</h3>
+          <div class="pub-meta"><span class="pub-venue">Microprocessors and Microsystems</span><span class="status status-review">Under Review</span></div>
+        </div>
+      </article>
+      <article class="card pub-card" data-type="journal">
+        <span class="pub-id">J4</span>
+        <div>
+          <h3>Carry Conservation in Approximate Accumulators: Quantizer Equivalence and an Entropy Bound</h3>
+          <div class="pub-meta"><span class="pub-venue">Integration, the VLSI Journal</span><span class="status status-review">Under Review</span></div>
+        </div>
+      </article>
+      <article class="card pub-card" data-type="journal">
+        <span class="pub-id">J3</span>
+        <div>
+          <h3>Resource-Release Timing Isolation for Shared AES Engines Using Commit-Gated Fixed Work</h3>
+          <div class="pub-meta"><span class="pub-venue">IEEE Embedded Systems Letters</span><span class="status status-review">Under Review</span></div>
+        </div>
+      </article>
+      <article class="card pub-card" data-type="journal">
+        <span class="pub-id">J2</span>
+        <div>
+          <h3>Overview of Advanced Micro-Nano Manufacturing Technologies for Triboelectric Nanogenerators</h3>
+          <div class="pub-meta"><span class="pub-venue">Nanoenergy Advances</span><span class="status status-published">Published</span></div>
+          <p class="pub-abstract">Review of advanced manufacturing technologies for triboelectric energy harvesting systems, covering micro-nano fabrication methods and their applications in nanogenerator design.</p>
+        </div>
+      </article>
+      <article class="card pub-card" data-type="journal">
+        <span class="pub-id">J1</span>
+        <div>
+          <h3>Evaluating SOC-Weighted Adaptive Control in Photovoltaic–Battery Inverter Systems</h3>
+          <div class="pub-meta"><span class="pub-venue">IEEE Access</span><span class="status status-review">Under Review</span></div>
+          <p class="pub-abstract">Proposes a State-of-Charge-aware adaptive phase-angle control framework that improves frequency stability while preventing excessive battery discharge in photovoltaic–battery inverter systems. The controller adapts its phase-angle reference dynamically according to real-time SoC measurements, balancing grid support capability with battery longevity.</p>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <section class="block pub-section" data-group="conference">
+      <div class="block-head"><h2>Conference Papers</h2></div>
+      <div class="pub-list">
+      <article class="card pub-card" data-type="conference">
+        <span class="pub-id">C3</span>
+        <div>
+          <h3>SOC-Aware Black-Start Restoration Framework for Battery Energy Storage Microgrids With Energy Feasibility Constraints</h3>
+          <div class="pub-meta"><span class="pub-venue">2026 IEEE PES Innovative Smart Grid Technologies Asia (IEEE PES ISGT Asia 2026)</span><span class="status status-accepted">Accepted</span></div>
+        </div>
+      </article>
+      <article class="card pub-card" data-type="conference">
+        <span class="pub-id">C2</span>
+        <div>
+          <h3>Predictive Impedance-Shaped Synchronization for Island-to-Grid Reconnection of Grid-Forming DER Inverters</h3>
+          <div class="pub-meta"><span class="pub-venue">IEEE IECON 2026</span><span class="status status-accepted">Accepted &amp; Presented</span></div>
+          <p class="pub-abstract">Proposes a PLL-free predictive impedance-shaped controller for smooth island-to-grid reconnection of grid-forming DER inverters. By minimizing predicted closing current before reconnection, it achieves 3.7 times faster synchronization than PLL control while reducing peak current from 14.56 A to 2.36 A in an independent-closure benchmark.</p>
+        </div>
+      </article>
+      <article class="card pub-card" data-type="conference">
+        <span class="pub-id">C1</span>
+        <div>
+          <h3>Modeling and PD Control of a Two-Link Planar Robotic Manipulator</h3>
+          <div class="pub-meta"><span class="pub-venue">6th International Conference on Artificial Intelligence and Electromechanical Automation (AIEA 2025)</span><span class="status status-ei">EI Indexed</span><span class="status status-published">Published</span></div>
+          <p class="pub-abstract">Presents dynamic modeling and PD feedback control design for a two-link planar robotic manipulator. Derives control gains for stable trajectory tracking and validates performance through simulation.</p>
+        </div>
+      </article>
+      </div>
+    </section>
+
   </div>
-
-  <section>
-    <h2>Thesis</h2>
-
-    <div class="pub-entry">
-      <span class="pub-id">[T1]</span>
-      <div class="pub-body">
-        <h3>A Chaotic ROI-Selective Image Encryption Accelerator for the Xilinx Kria KV260, Co-Designed with YOLOv8-nano Detection</h3>
-        <div class="pub-meta">
-          <span class="pub-venue">Undergraduate Thesis · New York University Tandon School of Engineering</span>
-          <span class="badge badge-prep">In Preparation</span>
-          <span class="badge badge-thesis">Thesis</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Journal Articles</h2>
-
-    <div class="pub-entry">
-      <span class="pub-id">[J5]</span>
-      <div class="pub-body">
-        <h3>Fitting FPGA Detector Activations On Chip: Certified Storage Formats and Layouts Beyond Live-Byte Estimates</h3>
-        <div class="pub-meta">
-          <span class="pub-venue">Microprocessors and Microsystems</span>
-          <span class="badge badge-review">Under Review</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="pub-entry">
-      <span class="pub-id">[J4]</span>
-      <div class="pub-body">
-        <h3>Carry Conservation in Approximate Accumulators: Quantizer Equivalence and an Entropy Bound</h3>
-        <div class="pub-meta">
-          <span class="pub-venue">Integration, the VLSI Journal</span>
-          <span class="badge badge-review">Under Review</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="pub-entry">
-      <span class="pub-id">[J3]</span>
-      <div class="pub-body">
-        <h3>Resource-Release Timing Isolation for Shared AES Engines Using Commit-Gated Fixed Work</h3>
-        <div class="pub-meta">
-          <span class="pub-venue">IEEE Embedded Systems Letters</span>
-          <span class="badge badge-review">Under Review</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="pub-entry">
-      <span class="pub-id">[J2]</span>
-      <div class="pub-body">
-        <h3>Overview of Advanced Micro-Nano Manufacturing Technologies for Triboelectric Nanogenerators</h3>
-        <div class="pub-meta">
-          <span class="pub-venue">Nanoenergy Advances</span>
-          <span class="badge badge-published">Published</span>
-        </div>
-        <div class="pub-abstract">
-          Review of advanced manufacturing technologies for triboelectric energy harvesting systems, covering micro-nano fabrication methods and their applications in nanogenerator design.
-        </div>
-      </div>
-    </div>
-
-    <div class="pub-entry">
-      <span class="pub-id">[J1]</span>
-      <div class="pub-body">
-        <h3>Evaluating SOC-Weighted Adaptive Control in Photovoltaic–Battery Inverter Systems</h3>
-        <div class="pub-meta">
-          <span class="pub-venue">IEEE Access</span>
-          <span class="badge badge-review">Under Review</span>
-        </div>
-        <div class="pub-abstract">
-          Proposes a State-of-Charge-aware adaptive phase-angle control framework that improves frequency stability while preventing excessive battery discharge in photovoltaic–battery inverter systems. The controller adapts its phase-angle reference dynamically according to real-time SoC measurements, balancing grid support capability with battery longevity.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Conference Papers</h2>
-
-    <div class="pub-entry">
-      <span class="pub-id">[C3]</span>
-      <div class="pub-body">
-        <h3>SOC-Aware Black-Start Restoration Framework for Battery Energy Storage Microgrids With Energy Feasibility Constraints</h3>
-        <div class="pub-meta">
-          <span class="pub-venue">2026 IEEE PES Innovative Smart Grid Technologies Asia (IEEE PES ISGT Asia 2026)</span>
-          <span class="badge badge-accepted">Accepted</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="pub-entry">
-      <span class="pub-id">[C2]</span>
-      <div class="pub-body">
-        <h3>Predictive Impedance-Shaped Synchronization for Island-to-Grid Reconnection of Grid-Forming DER Inverters</h3>
-        <div class="pub-meta">
-          <span class="pub-venue">IEEE IECON 2026</span>
-          <span class="badge badge-accepted">Accepted &amp; Presented</span>
-        </div>
-        <div class="pub-abstract">
-          Proposes a PLL-free predictive impedance-shaped controller for smooth island-to-grid reconnection of grid-forming DER inverters. By minimizing predicted closing current before reconnection, it achieves 3.7 times faster synchronization than PLL control while reducing peak current from 14.56 A to 2.36 A in an independent-closure benchmark.
-        </div>
-      </div>
-    </div>
-
-    <div class="pub-entry">
-      <span class="pub-id">[C1]</span>
-      <div class="pub-body">
-        <h3>Modeling and PD Control of a Two-Link Planar Robotic Manipulator</h3>
-        <div class="pub-meta">
-          <span class="pub-venue">6th International Conference on Artificial Intelligence and Electromechanical Automation (AIEA 2025)</span>
-          <span class="badge badge-ei">EI Indexed</span>
-          <span class="badge badge-published">Published</span>
-        </div>
-        <div class="pub-abstract">
-          Presents dynamic modeling and PD feedback control design for a two-link planar robotic manipulator. Derives control gains for stable trajectory tracking and validates performance through simulation.
-        </div>
-      </div>
-    </div>
-  </section>
-
-</div>
+</main>
 
 <footer>
-  Rei Li &nbsp;·&nbsp; Electrical Engineering &nbsp;·&nbsp; <a href="https://engineering.nyu.edu/" target="_blank">NYU Tandon School of Engineering</a>
+  Rei Li &nbsp;·&nbsp; Electrical Engineering &nbsp;·&nbsp; <a href="https://engineering.nyu.edu/" target="_blank" rel="noopener">NYU Tandon School of Engineering</a>
   &nbsp;·&nbsp;
   <a href="mailto:xl5871@nyu.edu">xl5871@nyu.edu</a>
 </footer>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.filter');
+    var sections = document.querySelectorAll('.pub-section');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var f = btn.getAttribute('data-filter');
+        buttons.forEach(function (b) {
+          var on = b === btn;
+          b.classList.toggle('is-active', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        sections.forEach(function (s) {
+          s.hidden = !(f === 'all' || s.getAttribute('data-group') === f);
+        });
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>
