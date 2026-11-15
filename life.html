@@ -10,35 +10,103 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     :root {
-      --dark: #0E251F; --primary: #556B46; --accent: #B26B5A;
-      --light: #D6E6F2; --warm: #DFA89A; --text: #C25A12; --muted: #C25A12;
+      --dark: #000; --primary: #E3B26E; --accent: #7a5a32;
+      --light: #1a1712; --warm: #DFA89A; --text: #EBCFA6; --muted: #C9A77C;
+      --gold: linear-gradient(100deg, #b9783a 10%, #f4d39b 32%, #fff4dc 42%, #e6aa5c 55%, #b9783a 80%);
     }
-    body { background: #EAF3FA; }
-    main, main h1, main h2, main h3, figcaption strong { font-family: 'Dancing Script', cursive; }
-    main .page-header h1, main h2 { color: #E07020; }
-    main { color: #C25A12; }
-    section h2 { text-transform: none; letter-spacing: 0; font-weight: 700; }
+    body {
+      background: #080706 radial-gradient(ellipse 90% 50% at 50% -8%, rgba(214, 140, 60, 0.20), transparent 70%) no-repeat;
+      background-attachment: fixed;
+    }
+    footer { border-top: 1px solid rgba(227, 178, 110, 0.18); }
+
+    /* twinkling star field */
+    .sky { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+    .sky::before, .sky::after {
+      content: ''; position: absolute; inset: 0;
+      background-repeat: no-repeat;
+      animation: twinkle 3.6s ease-in-out infinite alternate;
+    }
+    .sky::before {
+      background-image:
+        radial-gradient(1.6px 1.6px at 8% 14%, #fff6e0, transparent),
+        radial-gradient(1.2px 1.2px at 22% 62%, #f4d39b, transparent),
+        radial-gradient(2px 2px at 35% 28%, #fff, transparent),
+        radial-gradient(1.2px 1.2px at 48% 82%, #f4d39b, transparent),
+        radial-gradient(1.6px 1.6px at 63% 9%, #fff6e0, transparent),
+        radial-gradient(1.2px 1.2px at 77% 46%, #fff, transparent),
+        radial-gradient(2px 2px at 91% 24%, #f4d39b, transparent),
+        radial-gradient(1.2px 1.2px at 86% 74%, #fff6e0, transparent),
+        radial-gradient(1.6px 1.6px at 4% 88%, #f4d39b, transparent);
+    }
+    .sky::after {
+      animation-delay: -1.8s;
+      background-image:
+        radial-gradient(1.2px 1.2px at 15% 38%, #fff, transparent),
+        radial-gradient(1.8px 1.8px at 29% 6%, #f4d39b, transparent),
+        radial-gradient(1.2px 1.2px at 42% 54%, #fff6e0, transparent),
+        radial-gradient(1.6px 1.6px at 56% 36%, #fff, transparent),
+        radial-gradient(1.2px 1.2px at 69% 68%, #f4d39b, transparent),
+        radial-gradient(1.8px 1.8px at 82% 12%, #fff6e0, transparent),
+        radial-gradient(1.2px 1.2px at 95% 58%, #fff, transparent),
+        radial-gradient(1.6px 1.6px at 60% 92%, #fff6e0, transparent);
+    }
+    @keyframes twinkle { from { opacity: 0.25; } to { opacity: 1; } }
+    main { position: relative; z-index: 1; }
+
+    main, main h1, main h2, main h3 { font-family: 'Dancing Script', cursive; }
+    main { color: var(--text); }
+    section { border-bottom-color: rgba(227, 178, 110, 0.14); }
+    section h2 { text-transform: none; letter-spacing: 0; font-weight: 700; border-bottom: 1px solid rgba(227, 178, 110, 0.35); }
+    .page-header { border-bottom: 1px solid rgba(227, 178, 110, 0.35); position: relative; }
     .page-header, section h2 { text-align: center; }
-    .page-header h1 { font-size: 46px; }
-    .page-header p { font-size: 22px; }
-    section h2 { font-size: 30px; }
-    .life-intro { max-width: 680px; font-size: 23px; line-height: 1.75; margin-left: auto; margin-right: auto; text-align: center; }
-    .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 20px; }
+
+    /* shimmering gold headings */
+    main .page-header h1, main section h2 {
+      background: var(--gold); background-size: 220% auto;
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent; -webkit-text-fill-color: transparent;
+      animation: shine 7s linear infinite;
+    }
+    @keyframes shine { to { background-position: -220% center; } }
+    .page-header h1 { font-size: 52px; display: inline-block; padding: 0 8px; }
+    section h2 { font-size: 32px; }
+
+    /* sparkles beside the title */
+    .spark { display: inline-block; color: #f4d39b; font-size: 22px; vertical-align: 18px; animation: sparkle 2.4s ease-in-out infinite; text-shadow: 0 0 10px rgba(244, 211, 155, 0.8); }
+    .spark.s2 { font-size: 14px; vertical-align: 34px; animation-delay: -1.2s; }
+    @keyframes sparkle { 0%, 100% { opacity: 0.3; transform: scale(0.7) rotate(0deg); } 50% { opacity: 1; transform: scale(1.15) rotate(20deg); } }
+
+    .life-intro { max-width: 680px; font-size: 23px; line-height: 1.75; margin-left: auto; margin-right: auto; text-align: center; color: var(--text); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 34px 22px; }
     .gallery-featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .gallery-photo { display: block; background: var(--light); border-radius: 4px; overflow: hidden; }
+    .gallery-photo {
+      display: block; background: #12100d; border-radius: 6px; overflow: hidden;
+      border: 1px solid rgba(227, 178, 110, 0.22);
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+    .gallery-photo:hover { transform: translateY(-4px); border-color: rgba(244, 211, 155, 0.6); box-shadow: 0 0 0 1px rgba(244, 211, 155, 0.15), 0 14px 40px rgba(214, 140, 60, 0.22); }
     .gallery-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; }
     .gallery-featured img { aspect-ratio: 4 / 3; }
-    .gallery-photo:focus-visible { outline: 3px solid var(--primary); outline-offset: 4px; }
-    figcaption { margin-top: 12px; font-size: 19px; line-height: 1.65; color: var(--muted); }
-    figcaption strong { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 27px; color: var(--text); margin-bottom: 4px; }
+    .gallery-photo:focus-visible { outline: 2px solid #f4d39b; outline-offset: 4px; }
+    figcaption { margin-top: 14px; font-size: 19px; line-height: 1.65; color: var(--muted); }
+    figcaption strong { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 25px; font-weight: 600; color: #F2D3A2; margin-bottom: 4px; letter-spacing: 0.01em; }
     .gallery-hero { max-width: 560px; margin-left: auto; margin-right: auto; }
     .gallery-hero .gallery-photo img { aspect-ratio: auto; }
     .gallery-note { font-size: 19px; color: var(--muted); margin-top: 16px; text-align: center; }
-    @media (max-width: 640px) { .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; } }
+    @media (max-width: 640px) {
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
+      .page-header h1 { font-size: 40px; }
+    }
     @media (max-width: 420px) { .gallery-featured { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) {
+      .sky::before, .sky::after, .spark, main .page-header h1, main section h2 { animation: none; }
+      .sky::before, .sky::after { opacity: 0.7; }
+    }
   </style>
 </head>
 <body>
+<div class="sky" aria-hidden="true"></div>
 
 <nav>
   <span class="nav-brand">Rei Li</span>
@@ -52,7 +120,9 @@
 
 <main class="page-wrapper">
   <div class="page-header">
+    <span class="spark s2" aria-hidden="true">✦</span><span class="spark" aria-hidden="true">✦</span>
     <h1>Life — Made by Hand</h1>
+    <span class="spark" aria-hidden="true">✦</span><span class="spark s2" aria-hidden="true">✦</span>
   </div>
   <p class="life-intro">Away from circuits and code, I create food miniatures from polymer clay and other clays. Each tiny cake, colorful tart, and miniature dish is shaped by hand, with a focus on texture, color, and small details.</p>
   <section>

@@ -7,13 +7,13 @@
   <meta name="description" content="Research by Rei Li in reconfigurable and embedded computing, real-time control, and energy systems." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="site page-research">
 
 <nav>
-  <a class="nav-brand" href="index.html" style="text-decoration:none">Rei Li</a>
+  <a class="nav-brand" href="index.html">Rei Li</a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="publications.html">Publications</a></li>
@@ -23,115 +23,96 @@
 </nav>
 
 <main>
-  <div class="container">
 
-    <header class="page-hero">
-      <span class="eyebrow">Hardware · Embedded · Energy</span>
+  <section class="band hero">
+    <div class="wrap">
+      <span class="kicker">Hardware · Embedded · Energy</span>
       <h1>Research</h1>
-      <p>Research in reconfigurable and embedded computing, with complementary work in real-time control and energy systems.</p>
-      <div class="area-nav">
-        <a href="#current">Current Project</a>
-        <a href="#embedded">Embedded AI Systems</a>
-        <a href="#energy">Control &amp; Energy Systems</a>
-        <a href="#vision">Research Vision</a>
-      </div>
-    </header>
+      <p class="page-intro">Research in reconfigurable and embedded computing, with complementary work in real-time control and energy systems.</p>
+    </div>
+  </section>
 
-    <section class="block" id="current">
-      <div class="block-head"><h2>Current Project</h2></div>
-      <article class="card project project-featured">
-        <div class="project-label">
-          <span class="status status-published no-dot"><span class="live-dot" aria-hidden="true"></span>&nbsp;Ongoing</span>
-          <span class="chip">Undergraduate Thesis</span>
+  <section class="band tint">
+    <div class="wrap">
+      <article class="project">
+        <div class="project-head">
+          <span class="kicker">Current Project · Ongoing</span>
+          <h2>A Chaotic ROI-Selective Image Encryption Accelerator for the Xilinx Kria KV260, Co-Designed with YOLOv8-nano Detection</h2>
+          <p class="from">Undergraduate Thesis · NYU Tandon</p>
         </div>
-        <h3>A Chaotic ROI-Selective Image Encryption Accelerator for the Xilinx Kria KV260, Co-Designed with YOLOv8-nano Detection</h3>
-        <p>
-          Developing a chaotic ROI-selective image encryption accelerator for the Xilinx Kria
-          KV260, co-designed with YOLOv8-nano object detection. Detected regions of interest
-          guide selective encryption, linking visual detection with hardware-based image protection.
-        </p>
-        <p>
-          The project focuses on integrating detection outputs with the FPGA encryption pipeline
-          and exploring the trade-offs between resource use, processing latency, and selective
-          protection for edge vision applications.
-        </p>
-        <div class="chips"><span class="chip">Verilog</span><span class="chip">Vivado</span><span class="chip">FPGA</span><span class="chip">YOLOv8-nano</span><span class="chip">Xilinx Kria KV260</span><span class="chip">ROI-Selective Encryption</span><span class="chip">Hardware Security</span><span class="chip">Edge AI</span><span class="chip">Computer Vision</span></div>
+        <div class="narrow project-body">
+          <p>Developing a chaotic ROI-selective image encryption accelerator for the Xilinx Kria KV260, co-designed with YOLOv8-nano object detection. Detected regions of interest guide selective encryption, linking visual detection with hardware-based image protection.</p>
+          <p>The project focuses on integrating detection outputs with the FPGA encryption pipeline and exploring the trade-offs between resource use, processing latency, and selective protection for edge vision applications.</p>
+        </div>
+        <p class="stack narrow">Verilog · Vivado · FPGA · YOLOv8-nano · Xilinx Kria KV260 · ROI-Selective Encryption · Hardware Security · Edge AI · Computer Vision</p>
       </article>
-    </section>
+    </div>
+  </section>
 
-    <section class="block" id="embedded">
-      <div class="block-head"><h2>Embedded AI Systems</h2></div>
-      <article class="card project">
-        <div class="project-label"><span class="chip chip-orange">Independent Study · NYU</span></div>
-        <h3>ESP32-Based Intelligent Assistive Platform</h3>
-        <p>
-          Designing a resource-constrained embedded AI platform centered on the ESP32
-          microcontroller, targeting human-centered assistive applications. The system integrates
-          a camera module for real-time computer vision inference, a microphone array with voice
-          activity detection, and multiple environmental sensors fused through a lightweight
-          Kalman-based estimator.
-        </p>
-        <p>
-          Key design constraints include sub-100 mW power budget, latency under 200 ms for
-          vision inference, and operation without cloud connectivity. Inference is handled
-          on-device using quantized models optimized for the ESP32's dual-core Xtensa architecture.
-        </p>
-        <div class="chips"><span class="chip">ESP32</span><span class="chip">Edge AI</span><span class="chip">Sensor Fusion</span><span class="chip">Computer Vision</span><span class="chip">Real-Time Embedded</span></div>
+  <section class="band">
+    <div class="wrap">
+      <article class="project">
+        <div class="project-head">
+          <span class="kicker">Embedded AI Systems</span>
+          <h2>ESP32-Based Intelligent Assistive Platform</h2>
+          <p class="from">Independent Study · NYU</p>
+        </div>
+        <div class="narrow project-body">
+          <p>Designing a resource-constrained embedded AI platform centered on the ESP32 microcontroller, targeting human-centered assistive applications. The system integrates a camera module for real-time computer vision inference, a microphone array with voice activity detection, and multiple environmental sensors fused through a lightweight Kalman-based estimator.</p>
+          <p>Key design constraints include sub-100 mW power budget, latency under 200 ms for vision inference, and operation without cloud connectivity. Inference is handled on-device using quantized models optimized for the ESP32's dual-core Xtensa architecture.</p>
+        </div>
+        <p class="stack narrow">ESP32 · Edge AI · Sensor Fusion · Computer Vision · Real-Time Embedded</p>
       </article>
-    </section>
+    </div>
+  </section>
 
-    <section class="block" id="energy">
-      <div class="block-head"><h2>Real-Time Control &amp; Energy Systems</h2></div>
-      <article class="card project">
-        <div class="project-label"><span class="chip chip-orange">NYU Power &amp; Energy Systems Group · Prof. Francisco de León</span></div>
-        <h3>Adaptive Control for Inverter-Based Microgrids</h3>
-        <p>
-          Developed a suite of adaptive control and synchronization algorithms for inverter-based
-          distributed energy resources (DER) in grid-connected and islanded microgrid configurations.
-          Work spans three related problems: frequency regulation under variable photovoltaic
-          generation, seamless island-to-grid reconnection, and battery-aware black-start restoration.
-        </p>
-        <p>
-          The SoC-aware phase-angle control framework extends classical droop control by incorporating
-          a real-time SoC feedback loop that adjusts the inverter's active power setpoint, preventing
-          deep discharge events while maintaining grid frequency within IEEE 1547 bounds.
-          Simulations conducted in PSCAD and MATLAB/Simulink.
-        </p>
-        <div class="chips"><span class="chip">MATLAB</span><span class="chip">Simulink</span><span class="chip">PSCAD</span><span class="chip">Adaptive Control</span><span class="chip">Inverter Control</span><span class="chip">Microgrid</span><span class="chip">Battery Management</span><span class="chip">DER</span></div>
+  <section class="band tint">
+    <div class="wrap">
+      <article class="project">
+        <div class="project-head">
+          <span class="kicker">Real-Time Control &amp; Energy Systems</span>
+          <h2>Adaptive Control for Inverter-Based Microgrids</h2>
+          <p class="from">NYU Power &amp; Energy Systems Group · Prof. Francisco de León</p>
+        </div>
+        <div class="narrow project-body">
+          <p>Developed a suite of adaptive control and synchronization algorithms for inverter-based distributed energy resources (DER) in grid-connected and islanded microgrid configurations. Work spans three related problems: frequency regulation under variable photovoltaic generation, seamless island-to-grid reconnection, and battery-aware black-start restoration.</p>
+          <p>The SoC-aware phase-angle control framework extends classical droop control by incorporating a real-time SoC feedback loop that adjusts the inverter's active power setpoint, preventing deep discharge events while maintaining grid frequency within IEEE 1547 bounds. Simulations conducted in PSCAD and MATLAB/Simulink.</p>
+        </div>
+        <p class="stack narrow">MATLAB · Simulink · PSCAD · Adaptive Control · Inverter Control · Microgrid · Battery Management · DER</p>
       </article>
 
-      <article class="card project">
-        <div class="project-label"><span class="chip chip-orange">Chinese Academy of Sciences</span></div>
-        <h3>Battery Management Systems for Electric Vehicles</h3>
-        <p>
-          Investigated lithium-ion battery modeling, state estimation, and thermal management
-          strategies for electric vehicle battery packs. Work included equivalent circuit model
-          identification, SoC estimation using extended Kalman filtering, and analysis of
-          capacity fade under cycling conditions.
-        </p>
-        <div class="chips"><span class="chip">Battery Modeling</span><span class="chip">State Estimation</span><span class="chip">Kalman Filter</span><span class="chip">Lithium-Ion</span><span class="chip">Electric Vehicles</span></div>
+      <article class="project">
+        <div class="project-head">
+          <span class="kicker">Real-Time Control &amp; Energy Systems</span>
+          <h2>Battery Management Systems for Electric Vehicles</h2>
+          <p class="from">Chinese Academy of Sciences</p>
+        </div>
+        <div class="narrow project-body">
+          <p>Investigated lithium-ion battery modeling, state estimation, and thermal management strategies for electric vehicle battery packs. Work included equivalent circuit model identification, SoC estimation using extended Kalman filtering, and analysis of capacity fade under cycling conditions.</p>
+        </div>
+        <p class="stack narrow">Battery Modeling · State Estimation · Kalman Filter · Lithium-Ion · Electric Vehicles</p>
       </article>
-    </section>
+    </div>
+  </section>
 
-    <section class="block" id="vision">
-      <div class="vision">
-        <h2>Research Vision</h2>
-        <p>
-          My long-term goal is to develop <strong>efficient, secure, and dependable computing systems</strong> at the
-          hardware–algorithm interface. I am particularly interested in FPGA acceleration,
-          reconfigurable architectures, hardware security, and embedded platforms that support
-          intelligent applications under strict power, latency, and reliability constraints.
-        </p>
-        <p>
-          My work in real-time control and energy cyber-physical systems complements this hardware
-          focus by grounding architecture design in system dynamics, resource constraints, and
-          dependable operation. I am continuing to deepen my expertise in RTL design, FPGA
-          architecture, timing analysis, computer architecture, and ASIC design flows.
-        </p>
-      </div>
-    </section>
+  <section class="band vision">
+    <div class="wrap narrow">
+      <h2 class="title">Research Vision</h2>
+      <p>
+        My long-term goal is to develop <strong>efficient, secure, and dependable computing systems</strong> at the
+        hardware–algorithm interface. I am particularly interested in FPGA acceleration,
+        reconfigurable architectures, hardware security, and embedded platforms that support
+        intelligent applications under strict power, latency, and reliability constraints.
+      </p>
+      <p>
+        My work in real-time control and energy cyber-physical systems complements this hardware
+        focus by grounding architecture design in system dynamics, resource constraints, and
+        dependable operation. I am continuing to deepen my expertise in RTL design, FPGA
+        architecture, timing analysis, computer architecture, and ASIC design flows.
+      </p>
+    </div>
+  </section>
 
-  </div>
 </main>
 
 <footer>
