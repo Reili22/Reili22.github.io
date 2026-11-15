@@ -176,6 +176,11 @@ body.site {
 
 body.site main a { color: var(--navy); }
 
+/* per-page background tints (from each page's original theme) */
+body.page-home     { --bg: #f6e7ee; }  /* lavender blush */
+body.page-pubs     { --bg: #f4eedf; }  /* warm cream */
+body.page-research { --bg: #e9f4f1; }  /* seafoam tint */
+
 .site .container {
   max-width: 1080px;
   margin: 0 auto;
