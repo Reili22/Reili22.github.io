@@ -11,20 +11,25 @@
   <style>
     :root {
       --dark: #0E251F; --primary: #556B46; --accent: #B26B5A;
-      --light: #F2EBD8; --warm: #DFA89A; --text: #1c130f; --muted: #7a6255;
+      --light: #D6E6F2; --warm: #DFA89A; --text: #1c130f; --muted: #7a6255;
     }
-    .life-intro { max-width: 620px; font-size: 15px; }
+    body { background: #EAF3FA; }
+    .page-header, section h2 { text-align: center; }
+    .page-header h1 { font-size: 34px; }
+    .page-header p { font-size: 16px; }
+    section h2 { font-size: 14px; }
+    .life-intro { max-width: 680px; font-size: 18px; line-height: 1.75; margin-left: auto; margin-right: auto; text-align: center; }
     .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 20px; }
     .gallery-featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .gallery-photo { display: block; background: var(--light); border-radius: 4px; overflow: hidden; }
     .gallery-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; }
     .gallery-featured img { aspect-ratio: 4 / 3; }
     .gallery-photo:focus-visible { outline: 3px solid var(--primary); outline-offset: 4px; }
-    figcaption { margin-top: 12px; font-size: 12px; line-height: 1.65; color: var(--muted); }
-    figcaption strong { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 17px; color: var(--text); margin-bottom: 4px; }
-    .gallery-hero { max-width: 560px; }
+    figcaption { margin-top: 12px; font-size: 15px; line-height: 1.65; color: var(--muted); }
+    figcaption strong { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 21px; color: var(--text); margin-bottom: 4px; }
+    .gallery-hero { max-width: 560px; margin-left: auto; margin-right: auto; }
     .gallery-hero .gallery-photo img { aspect-ratio: auto; }
-    .gallery-note { font-size: 12px; color: var(--muted); margin-top: 16px; }
+    .gallery-note { font-size: 14px; color: var(--muted); margin-top: 16px; text-align: center; }
     @media (max-width: 640px) { .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; } }
     @media (max-width: 420px) { .gallery-featured { grid-template-columns: 1fr; } }
   </style>
