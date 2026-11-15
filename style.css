@@ -23,21 +23,27 @@
   --sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* ── Page themes (from the original per-page palettes) ── */
-body.page-home {            /* Plum purple */
-  --dark:  #3E2F5D;
-  --theme: #5E4A8B;
-  --band:  #F7EEF3;
+/* ── Page themes (saturated versions of the original per-page palettes) ──
+   --theme   accent on white sections
+   --band    solid colour block (white text sits on it)
+   --on-band accent used inside the colour block                            */
+body.page-home {            /* Purple + pink */
+  --dark:    #2E1466;
+  --theme:   #6A3BD1;
+  --band:    #5B2DC2;
+  --on-band: #FFC4EC;
 }
-body.page-pubs {            /* Forest green + blush rose */
-  --dark:  #1A4D41;
-  --theme: #1A4D41;
-  --band:  #F6F1E5;
+body.page-pubs {            /* Emerald green + rose */
+  --dark:    #063D2E;
+  --theme:   #0B7A57;
+  --band:    #0B7A57;
+  --on-band: #FFC2D1;
 }
 body.page-research {        /* Teal + amber */
-  --dark:  #27443F;
-  --theme: #3F7569;
-  --band:  #EEF6F4;
+  --dark:    #063F3B;
+  --theme:   #0B7C72;
+  --band:    #0B7C72;
+  --on-band: #FFC877;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -181,7 +187,19 @@ body.site { color: var(--ink); background: #fff; }
   border: 0;
 }
 
-.site section.tint { background: var(--band); }
+.site section.tint {
+  background: var(--band);
+  color: #fff;
+  --ink:   #ffffff;
+  --grey:  rgba(255, 255, 255, 0.78);
+  --body:  rgba(255, 255, 255, 0.92);
+  --hair:  rgba(255, 255, 255, 0.22);
+  --theme: var(--on-band);
+}
+
+.site section.tint .st-published { color: #A8F0C6; }
+.site section.tint .st-review    { color: #FFD27A; }
+.site section.tint .st-prep      { color: rgba(255, 255, 255, 0.75); }
 
 /* headings */
 .site .kicker {
@@ -456,7 +474,7 @@ body.site main a.btn { color: #fff; }
 .site .project-body p {
   font-size: 17px;
   line-height: 1.7;
-  color: #424245;
+  color: var(--body, #424245);
 }
 
 .site .project-body p + p { margin-top: 16px; }
